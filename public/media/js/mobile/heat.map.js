@@ -114,20 +114,41 @@ function generateMap(currentLatitude, currentLongitude) {
             ]
         }
     ]);
+        // Create the search box and link it to the UI element.
+    var input = /** @type {HTMLInputElement} */(
+        document.getElementById('pac-input'));
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    pointArray = new google.maps.MVCArray(coordinates);
+    var searchBox = new google.maps.places.SearchBox(
+        /** @type {HTMLInputElement} */(input));
 
-    heatmap = new google.maps.visualization.HeatmapLayer({
-        data: pointArray
+//    [START region_getplaces]
+//    Listen for the event fired when the user selects an item from the
+//    pick list. Retrieve the matching places for that item.
+    google.maps.event.addListener(searchBox, 'places_changed', function() {
+        var places = searchBox.getPlaces();
+
+        if (places.length == 0) {
+            return;
+        }
+
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0, place; place = places[i]; i++) {
+            setCurrentPostionMarker(map, place.geometry.location.latitude, place.geometry.location.longitude);
+            bounds.extend(place.geometry.location);
+            break;
+        }
+
+        map.fitBounds(bounds);
     });
 
-    heatmap.setMap(map);
+    google.maps.event.addListener(map, 'bounds_changed', function() {
+        var bounds = map.getBounds();
+        searchBox.setBounds(bounds);
+    });
 
-    setGradient();
-    setRadius();
     setCurrentPostionMarker(map, currentLatitude, currentLongitude);
 }
-
 function setMapStyle(map){
 
 }
