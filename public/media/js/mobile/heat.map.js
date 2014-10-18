@@ -117,35 +117,41 @@ function generateMap() {
 
     heatmap.setMap(map);
 
-    setGradient(heatmap);
+    setGradient();
+    setRadius();
 }
 
 function toggleHeatmap() {
     heatmap.setMap(heatmap.getMap() ? null : map);
 }
 
-function setGradient(map) {
+function setGradient() {
     var gradient = [
-        'rgba(0, 255, 255, 0)',
-        'rgba(0, 255, 255, 1)',
-        'rgba(0, 191, 255, 1)',
-        'rgba(0, 127, 255, 1)',
-        'rgba(0, 63, 255, 1)',
-        'rgba(0, 0, 255, 1)',
-        'rgba(0, 0, 223, 1)',
-        'rgba(0, 0, 191, 1)',
-        'rgba(0, 0, 159, 1)',
-        'rgba(0, 0, 127, 1)',
-        'rgba(63, 0, 91, 1)',
-        'rgba(127, 0, 63, 1)',
-        'rgba(191, 0, 31, 1)',
-        'rgba(255, 0, 0, 1)'
-    ]
+        'rgba(255, 151, 0, 0)',
+        'rgba(254, 144, 11, 1)',
+        'rgba(253, 137, 21, 1)',
+        'rgba(252, 130, 32, 1)',
+        'rgba(251, 123, 42, 1)',
+        'rgba(250, 116, 53, 1)',
+        'rgba(249, 109, 63, 1)',
+        'rgba(249, 103, 74, 1)',
+        'rgba(248, 96, 84, 1)',
+        'rgba(247, 89, 94, 1)',
+        'rgba(246, 82, 105, 1)',
+        'rgba(245, 75, 115, 1)',
+        'rgba(244, 68, 126, 1)',
+        'rgba(243, 61, 136, 1)',
+        'rgba(242, 54, 147, 1)',
+        'rgba(241, 54, 123, 1)',
+        'rgba(241, 54, 100, 1)',
+        'rgba(240, 53, 77, 1)',
+        'rgba(239, 53, 53, 1)'
+    ];
     heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
 }
 
 function setRadius() {
-    heatmap.set('radius', heatmap.get('radius') ? null : 20);
+    heatmap.set('radius', heatmap.get('radius') ? null : 10);
 }
 
 function setOpacity() {
