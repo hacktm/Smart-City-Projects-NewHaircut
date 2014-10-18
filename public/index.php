@@ -2,7 +2,6 @@
 
 defined('DS') || define('DS', DIRECTORY_SEPARATOR);
 
-define('IS_AJAX', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest'));
 define('BASE_PATH', realpath(__DIR__ . DS . '..'));
 define('PUBLIC_PATH', realpath(__DIR__));
 define('PROJECT_PATH', BASE_PATH);
@@ -19,13 +18,20 @@ require_once LIBRARIES_PATH . DS . 'Slim' . DS . 'Slim.php';
 
 \Slim\Slim::registerAutoloader();
 
-$app = new \Slim\Slim();
+$app = new \Slim\Slim(require_once BASE_PATH . DS . 'configs' . DS . 'application.php');
 
-$app->get(
-    '/',
-    function () {
-        echo 'Hello World';
+\Core\Application::initialize($app);
+
+/** Define Routes */
+$app->notFound(function () use ($app) {
+    $app->render('error/404.php');
+});
+
+$app->get('/',
+    function () use ($app) {
+        echo '<br/>Hello World';
     }
-);
+)->name('index');
 
+/** Start Application */
 $app->run();
