@@ -4,5 +4,4 @@
     <div id="map-canvas"></div>
 </div>
 
-</body>
-</html>
+<?php $app->render('mobile/partials/footer-includes.php'); ?>
