@@ -4,6 +4,7 @@ html, body {
     padding: 0;
 }
 
+
 #panel {
     position: absolute;
     top: 5px;
@@ -31,8 +32,8 @@ html, body {
     background-color: green;
 }
 .wrapper{
-    width: 100%;
-    height: 100%;
+    width:100%;
+    height:100%;
 }
 .row{
     padding: 8px;
@@ -46,4 +47,33 @@ html, body {
     height: 40px;
     display: inline-block;
     width: 45%;
+}
+
+/******************** TUTORIAL SECTION ********************/
+/* Tutorial slides */
+.tutorial-slide-1{
+    background: lightgoldenrodyellow;
+    width: 100%;
+    height:100%;
+}
+.tutorial-slide-2{
+    background: lightblue;
+    width: 100%;
+    height:100%;
+}
+.tutorial-slide-3{
+    background: lightcoral;
+    width: 100%;
+    height:100%;
+}
+/* Tutorial close buttons */
+.close-tutorial-button{
+    float:right;
+    padding: 8px;
+    font-size: 30px;
+}
+
+.tutorial p{
+    margin: 0;
+    padding:0;
 }
