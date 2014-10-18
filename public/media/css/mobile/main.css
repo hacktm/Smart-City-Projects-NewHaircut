@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #panel {
@@ -33,6 +34,7 @@ html, body {
 .wrapper {
     width: 100%;
     height: 100%;
+    float:left;
 }
 .row {
     padding: 8px;
@@ -46,4 +48,121 @@ html, body {
     height: 40px;
     display: inline-block;
     width: 45%;
+}
+/* Main Screen*/
+
+.main-screen {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    color: #ffffff;
+    bottom: 50px;
+}
+.awesome-btn {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #f42f92;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #ae2268;
+    border-bottom-width: 15px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 80px;
+    color: #fff;
+    font-weight: 700;
+}
+
+/******************** TUTORIAL SECTION ********************/
+.tutorial{
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    display: none;
+}
+
+/* Tutorial slides */
+.tutorial-slide-1{
+    background: lightgoldenrodyellow;
+    width: 100%;
+    height:100%;
+}
+.tutorial-slide-2{
+    background: lightblue;
+    width: 100%;
+    height:100%;
+}
+.tutorial-slide-3{
+    background: lightcoral;
+    width: 100%;
+    height:100%;
+}
+/* Tutorial close buttons */
+.close-tutorial-button{
+    float:right;
+    padding: 8px;
+    font-size: 30px;
+}
+
+.tutorial p{
+    margin: 0;
+    padding:0;
+}
+
+.controls {
+    margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+    background-color: #fff;
+    padding: 0 11px 0 13px;
+    z-index: 0;
+    position: absolute;
+    top: 71% !important;
+    left: 10% !important;
+    width: 60%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+.pac-container {
+    font-family: Roboto;
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+@media (max-width: 500px) {
+    .awesome-btn {
+        font-size: 100%;
+    }
+    #pac-input {
+        top: 79% !important;
+
+    }
 }
