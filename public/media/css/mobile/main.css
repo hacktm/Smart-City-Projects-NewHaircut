@@ -86,29 +86,34 @@ html, body {
 }
 
 /* Tutorial slides */
-.tutorial-slide-1{
-    background: lightgoldenrodyellow;
+.bxslider li div{
+    background: #2c3659;
+    margin:0 auto;
     width: 100%;
     height:100%;
+
 }
-.tutorial-slide-2{
-    background: lightblue;
-    width: 100%;
-    height:100%;
-}
-.tutorial-slide-3{
-    background: lightcoral;
-    width: 100%;
-    height:100%;
-}
+
 /* Tutorial close buttons */
 .close-tutorial-button{
     float:right;
     padding: 8px;
     font-size: 30px;
+    display: block;
+    margin: 15px;color: #ffffff;
+    width: 25px;
+    height: 25px;
+    background: url('../../images/mobile/close-1.png') no-repeat center center;
+    background-size: 20px 20px;
 }
 
 .tutorial p{
     margin: 0;
-    padding:0;
+    padding-top: 80px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+}
+.tutorial p span{
+padding: 10px;
 }
