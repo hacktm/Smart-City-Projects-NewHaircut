@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
-    margin: 0px;
-    padding: 0px
+    margin: 0;
+    padding: 0;
 }
 
 #panel {
@@ -17,7 +17,7 @@ html, body {
 
 #map-canvas {
     width: 100%;
-    height: 500px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -32,8 +32,7 @@ html, body {
 }
 .wrapper{
     width: 100%;
-    margin-top:20px;
-    text-align: center;
+    height: 100%;
 }
 .row{
     padding: 8px;
