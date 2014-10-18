@@ -4,6 +4,7 @@ $(document).ready(function () {
 
 
     // 2. tutorial slider
+    initializeTutorial();
 
     // 3. main screen (current location + button awesome)
 
