@@ -89,16 +89,21 @@ function generateMap(currentLatitude, currentLongitude) {
             featureType: 'poi',
             elementType: 'labels',
             stylers: [
-                { saturation: -100 },
-                { invert_lightness: true }
+                { color:'#82819b' }
             ]
         },
         {
             featureType: 'district',
-            elementType: 'labels',
+            elementType: 'labels.text',
             stylers: [
-                { saturation: -100 },
-                { invert_lightness: true }
+                { color:'#82819b' }
+            ]
+        },
+        {
+            featureType: 'district',
+            elementType: 'labels.text.stroke',
+            stylers: [
+                { visibility:'off' }
             ]
         },
         {
@@ -168,7 +173,7 @@ function setCurrentPostionMarker(map, latitude, longitude) {
     var myLatlng = new google.maps.LatLng(latitude, longitude);
     var marker = new google.maps.Marker({
         position: myLatlng,
-        title: "Me!"
+        icon: '/media/images/mobile/current-location-marker.png'
     });
 
     marker.setMap(map);

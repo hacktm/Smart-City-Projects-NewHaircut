@@ -6,7 +6,7 @@ class MobileController extends AbstractController {
 
     public function indexAction()
     {
-        $this->app->render('mobile/index.php');
+        $this->app->render('mobile/index.phtml');
     }
 
 }
