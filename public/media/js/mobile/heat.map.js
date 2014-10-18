@@ -15,17 +15,18 @@ function initialize() {
                 coordinates.push(new google.maps.LatLng(coordinatesSet.latitude, coordinatesSet.longitude));
             });
 
-            generateMap();
+            generateMap('45.755539', '21.237499');
         }
     );
 }
 
-function generateMap() {
+function generateMap(currentLatitude, currentLongitude) {
 
     var mapOptions = {
         zoom: 14,
-        center: new google.maps.LatLng('45.755539', '21.237499'),
-        mapTypeId: google.maps.MapTypeId.ROAD
+        center: new google.maps.LatLng(currentLatitude, currentLongitude),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true
     };
 
     map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -52,7 +53,7 @@ function generateMap() {
             featureType: 'landscape',
             elementType: 'geometry',
             stylers: [
-                { color: '#292750' },
+                { color: '#292750' }
 
             ]
         },
@@ -119,6 +120,11 @@ function generateMap() {
 
     setGradient();
     setRadius();
+    setCurrentPostionMarker(map, currentLatitude, currentLongitude);
+}
+
+function setMapStyle(map){
+
 }
 
 function toggleHeatmap() {
@@ -156,4 +162,14 @@ function setRadius() {
 
 function setOpacity() {
     heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+}
+
+function setCurrentPostionMarker(map, latitude, longitude) {
+    var myLatlng = new google.maps.LatLng(latitude, longitude);
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        title: "Me!"
+    });
+
+    marker.setMap(map);
 }
