@@ -33,7 +33,7 @@ $app->get('/',
     }
 )->name('index');
 
-$app->get('/mobile',
+$app->get('/mobile(/)',
     function () use ($app) {
 
     }
