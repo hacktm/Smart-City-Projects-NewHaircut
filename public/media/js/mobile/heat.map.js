@@ -89,16 +89,21 @@ function generateMap(currentLatitude, currentLongitude) {
             featureType: 'poi',
             elementType: 'labels',
             stylers: [
-                { saturation: -100 },
-                { invert_lightness: true }
+                { color:'#82819b' }
             ]
         },
         {
             featureType: 'district',
-            elementType: 'labels',
+            elementType: 'labels.text',
             stylers: [
-                { saturation: -100 },
-                { invert_lightness: true }
+                { color:'#82819b' }
+            ]
+        },
+        {
+            featureType: 'district',
+            elementType: 'labels.text.stroke',
+            stylers: [
+                { visibility:'off' }
             ]
         },
         {
