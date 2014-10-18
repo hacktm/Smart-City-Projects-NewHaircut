@@ -32,10 +32,11 @@
     <link rel="stylesheet" type="text/css" href="/media/css/mobile/main.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="/media/css/mobile/framework7.min.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="/media/css/mobile/framework7.themes.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/media/css/mobile/bxslider.css" media="screen"/>
 
-
+    <script src="/media/js/mobile/tutorial.js"></script>
     <script src="/media/js/mobile/framework7.min.js"></script>
-
+    <script src="/media/js/mobile/bxslider.js"></script>
     <script src="/media/js/mobile/heat.map.js"></script>
     <script src="/media/js/mobile/main.js"></script>
 </head>
