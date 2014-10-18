@@ -21,6 +21,7 @@ class Application {
                     require_once APPLICATION_PATH . DS . 'controllers' . DS . $controllerFile;
 
                     $object = new $controllerName();
+                    $app->view->setData('app', $app);
                     $object->app = $app;
                     $object->{$actionName}();
                 }
