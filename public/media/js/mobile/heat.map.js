@@ -2,7 +2,7 @@ var map, pointArray, heatmap;
 
 window.coordinates = [];
 
-function initialize() {
+function initializeMap() {
     // get current coordinates
 
     // get parties
