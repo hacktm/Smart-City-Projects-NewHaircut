@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
+#panel {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -180px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#add-location {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin:0 auto;
+    border: 0;
+    background-color: green;
+}
+.wrapper{
+    width: 100%;
+    margin-top:20px;
+    text-align: center;
+}
+.row{
+    padding: 8px;
+}
+.navigation{
+    margin:0 auto;
+    width: 300px;
+}
+.navigation a{
+    background: #ddd;
+    height: 40px;
+    display: inline-block;
+    width: 45%;
+}

@@ -29,9 +29,15 @@ $app->notFound(function () use ($app) {
 
 $app->get('/',
     function () use ($app) {
-        echo '<br/>Hello World';
+
     }
 )->name('index');
+
+$app->get('/mobile',
+    function () use ($app) {
+
+    }
+)->name('mobile');
 
 /** Start Application */
 $app->run();
