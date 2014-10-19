@@ -1,0 +1,54 @@
+<style>
+    .page {
+        width: 100%;
+        height: 100%;
+    }
+    .loading-screen {
+        width: 100%;
+        margin: 0px auto;
+        background-image: url('media/images/mobile/loading-screen.jpg');
+    }
+    .loading-screen .app-name {
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-weight: 700;
+        font-size: 120px;
+        color: #ffffff;
+        text-align: center;
+    }
+    .loading-screen .app-name span{
+        color: #f42f92;
+    }
+    .loading-screen .logo-wrapper {
+        height: 30%;
+        background: url('media/images/mobile/logo-without-bolt.png') no-repeat center;
+    }
+    @-webkit-keyframes rotate {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    .loading-screen .app-logo .thunder {
+        width: 132px;
+        height: 265px;
+        position: absolute;
+        top: 85px;
+        left: 46%;
+        background: url('media/images/mobile/logo-inner-bolt.png') no-repeat center;
+        -webkit-font-smoothing: antialiased;
+        -webkit-animation-name: rotate;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+    }
+</style>
+
+<div class="page loading-screen" data-page="loading-screen">
+    <div class="app-logo">
+        <img src="media/images/mobile/logo-without-bolt.png"
+        <span class="thunder"></span>
+    </div>
+    <div class="app-name"><p>WHERE'S<br/> THE <span>PARTY</span>?</p></div>
+</div>
