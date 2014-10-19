@@ -103,3 +103,9 @@ function setCurrentPostion() {
     map.setCenter(myLatlng);
     map.setZoom(15);
 }
+
+function jumpToCenter(){
+    var center = new google.maps.LatLng(currentLocation.latitude, currentLocation.longitude);
+    // using global variable:
+    map.panTo(center);
+}
