@@ -25,8 +25,14 @@ $(document).ready(function () {
     // 5. set party markers
 
 
+    lockOrientation();
 });
 
 function hideLoader() {
     $('.loading-screen').delay(5000).fadeOut(500);
+}
+
+function lockOrientation() {
+    var lockOrientation = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+    lockOrientation('portrait');
 }
