@@ -252,7 +252,7 @@ button,a {
     min-height: 100%;
     margin: 0px auto;
     background: url('../../images/mobile/loading-screen.jpg') !important;
-    z-index: 50;
+    z-index: 10000;
 }
 .loading-screen .app-name {
     font-family: 'PT Sans Narrow', sans-serif;
