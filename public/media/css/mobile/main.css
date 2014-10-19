@@ -153,47 +153,52 @@ button,a {
 }
 
 /******************** TUTORIAL SECTION ********************/
-.tutorial{
+.tutorial {
     width: 100%;
     height: 100%;
-    z-index: 200;
+    z-index: 40;
     display: none;
 }
 
 /* Tutorial slides */
-.bxslider li div{
+.bxslider li div {
     background: #34315a;
     margin:0 auto;
     width: 100%;
     height:100%;
-
 }
 
 /* Tutorial close buttons */
-.close-tutorial-button{
-    float:right;
-    padding: 8px;
-    font-size: 30px;
-    display: block;
-    margin: 15px;color: #ffffff;
-    width: 25px;
-    height: 25px;
-    background: url('../../images/mobile/close.png') no-repeat center center;
-    background-size: 20px 20px;
-}
-
-.tutorial p{
+.tutorial p {
     margin: 0;
-    padding-top: 80px;
+    padding: 20px;
     color: #ffffff;
     text-align: center;
-    font-size: 30px;
+    font-size: 18px;
 }
-.tutorial p span{
-padding: 10px;
+.tutorial p span {
+    padding: 10px;
     padding:0;
 }
-
+.first-slider img {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.second-slider img {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.third-slider img {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.third-slider .close-tutorial-button {
+    display: block;
+}
+.third-slider p {
+    font-size: 20px;
+    font-weight: 700;
+}
 .controls {
     margin-top: 16px;
     border: 1px solid transparent;
@@ -247,7 +252,7 @@ padding: 10px;
     min-height: 100%;
     margin: 0px auto;
     background: url('../../images/mobile/loading-screen.jpg') !important;
-    z-index: 20;
+    z-index: 50;
 }
 .loading-screen .app-name {
     font-family: 'PT Sans Narrow', sans-serif;
@@ -302,7 +307,7 @@ padding: 10px;
 
 .popup-window {
     display: none;
-    z-index: 35;
+    z-index: 20;
     width: 100%;
     height: 100%;
     border-radius: 10px;
