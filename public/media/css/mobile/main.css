@@ -5,7 +5,9 @@ html, body {
     font-family: 'PT Sans Narrow', sans-serif !important;
     -webkit-font-smoothing: antialiased;
 }
-
+button,a {
+    outline: none;
+}
 #panel {
     position: absolute;
     top: 5px;
@@ -59,6 +61,13 @@ html, body {
     color: #ffffff;
     bottom: 50px;
 }
+.top-main-screen {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    color: #ffffff;
+    top: 40px;
+}
 .awesome-btn {
     width: 100%;
     padding-top: 15px;
@@ -71,9 +80,9 @@ html, body {
     font-size: 80px;
     color: #fff;
     font-weight: 700;
-    box-shadow: 0 10px 0px 0px #ae2268;
-    -webkit-box-shadow: 0 10px 0px 0px #ae2268;
-    -moz-box-shadow: 0 10px 0px 0px #ae2268;
+    box-shadow: 0 7px 0px 0px #ae2268;
+    -webkit-box-shadow: 0 7px 0px 0px #ae2268;
+    -moz-box-shadow: 0 7px 0px 0px #ae2268;
     font-family: 'PT Sans Narrow', sans-serif;
 }
 .refresh-btn {
@@ -243,10 +252,9 @@ padding: 10px;
 .popup-window {
     display: none;
     z-index: 35;
-    width: 310px;
-    height: 449px;
-    border-radius: 10px;
-    left: 12%;
+    width: 80%;
+    height: 75%;
+    left: 10%;
     position: absolute;
     background: #403e71;
 }
