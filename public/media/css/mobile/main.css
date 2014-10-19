@@ -337,10 +337,12 @@ button,a {
     padding-left: 20px;
     padding-right: 20px;
     line-height: 24px;
+    padding-top: 425px;
+    text-align: center;
 }
 .thermometer-bg {
     background: url('../../images/mobile/thermometer.png') no-repeat center;
-    height: 70%;
+    height: 40%;
     width: 100%;
     background-size: 25%;
     margin-top: 20px;
