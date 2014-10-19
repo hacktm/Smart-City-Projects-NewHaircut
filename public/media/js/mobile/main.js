@@ -1,13 +1,10 @@
-var fireBaseRef = new Firebase('https://glaring-torch-3644.firebaseio.com/');
+var fireBaseRef = new Firebase('https://radiant-torch-4202.firebaseio.com/');
 var currentLocation;
-var heatMapPoints = new Array();
+var markerMyLocation = null;
 var map;
 var heatMap;
 
-// show loader
-
 $(document).ready(function () {
-
 
     // 1. loading screen (get location!!!!! + get current parties coordinates)
     initializeMap();
@@ -15,7 +12,6 @@ $(document).ready(function () {
     initializeCurrentLocation();
 
     // 2. tutorial slider
-
     if (!window.location.hash) {
         initializeTutorial();
     }
@@ -36,5 +32,4 @@ $(document).ready(function () {
 
 function hideLoader() {
     $('.loading-screen').delay(5000).fadeOut(500);
-
 }
