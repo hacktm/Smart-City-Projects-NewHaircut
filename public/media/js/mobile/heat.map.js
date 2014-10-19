@@ -2,6 +2,24 @@ function initializeHeatMap() {
     var postsRef = new Firebase("https://glaring-torch-3644.firebaseio.com/");
     var postsQuery = postsRef.limit(200);
 
+    heatMapPoints = [
+        new google.maps.LatLng(45.746062, 21.240365),
+        new google.maps.LatLng(45.745920, 21.240080),
+        new google.maps.LatLng(45.745527, 21.240359),
+        new google.maps.LatLng(45.745759, 21.240338),
+        new google.maps.LatLng(45.745901, 21.239968),
+        new google.maps.LatLng(45.745428, 21.240268),
+        new google.maps.LatLng(45.745582, 21.240401),
+        new google.maps.LatLng(45.745502, 21.240463),
+        new google.maps.LatLng(45.745562, 21.240629),
+        new google.maps.LatLng(45.745458, 21.240653),
+        new google.maps.LatLng(45.745277, 21.240365),
+        new google.maps.LatLng(45.745594, 21.240194),
+        new google.maps.LatLng(45.745668, 21.240612),
+        new google.maps.LatLng(45.745547, 21.240553),
+        new google.maps.LatLng(45.745766, 21.240083)
+    ];
+
     postsQuery.on('value', function (records) {
             records.forEach(function (element) {
                 coordinatesSet = element.val();
@@ -16,32 +34,27 @@ function initializeHeatMap() {
 
             heatMap.setMap(map);
             setHeatMapGradient();
+            setHeadMapRadius();
         }
     );
 }
 
 function setHeatMapGradient() {
     var gradient = [
-        'rgba(255, 151, 0, 0)',
-        'rgba(254, 144, 11, 1)',
-        'rgba(253, 137, 21, 1)',
-        'rgba(252, 130, 32, 1)',
-        'rgba(251, 123, 42, 1)',
-        'rgba(250, 116, 53, 1)',
-        'rgba(249, 109, 63, 1)',
-        'rgba(249, 103, 74, 1)',
-        'rgba(248, 96, 84, 1)',
-        'rgba(247, 89, 94, 1)',
-        'rgba(246, 82, 105, 1)',
-        'rgba(245, 75, 115, 1)',
-        'rgba(244, 68, 126, 1)',
-        'rgba(243, 61, 136, 1)',
-        'rgba(242, 54, 147, 1)',
-        'rgba(241, 54, 123, 1)',
-        'rgba(241, 54, 100, 1)',
-        'rgba(240, 53, 77, 1)',
-        'rgba(239, 53, 53, 1)'
+        'rgba(0, 255, 255, 0)',
+        'rgba(106, 89, 171, 1)',
+        'rgba(122, 84, 165, 1)',
+        'rgba(138, 79, 159, 1)',
+        'rgba(155, 74, 153, 1)',
+        'rgba(172, 69, 147, 1)',
+        'rgba(188, 64, 141, 1)',
+        'rgba(205, 59, 134, 1)',
+        'rgba(222, 53, 128, 1)',
+        'rgba(238, 48, 122, 1)'
     ];
     heatMap.set('gradient', heatMap.get('gradient') ? null : gradient);
 }
 
+function setHeadMapRadius() {
+    heatMap.set('radius', heatMap.set('radius') ? null : 20);
+}
