@@ -95,7 +95,7 @@ function setCurrentPostion() {
     var myLatlng = new google.maps.LatLng(currentLocation.latitude, currentLocation.longitude);
     var marker = new google.maps.Marker({
         position: myLatlng,
-        icon: '/media/images/mobile/current-location-marker.png'
+        icon: '/media/images/mobile/me-pin.png'
     });
 
     marker.setMap(map);
