@@ -85,8 +85,11 @@ button,a {
     -moz-box-shadow: 0 7px 0px 0px #ae2268;
     font-family: 'PT Sans Narrow', sans-serif;
 }
-.refresh-btn {
-    background: url("../../images/mobile/Location-icon_x2.png") no-repeat center #f42f92;
+.refresh-btn,
+.refresh-btn-loading {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f42f92;
     width: 45px;
     height: 45px;
     display: inline-block;
@@ -99,6 +102,54 @@ button,a {
     -webkit-box-shadow: 0 5px 0px 0px #ae2268;
     -moz-box-shadow:0 5px 0px 0px #ae2268;
     background-size: 80%;
+}
+.refresh-btn {
+    background-image: url("../../images/mobile/Location-icon_x2.png");
+}
+.refresh-btn-loading {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    position: relative;
+
+    background: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #f42f92;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
 }
 
 /******************** TUTORIAL SECTION ********************/
