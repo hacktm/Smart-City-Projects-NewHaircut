@@ -1,5 +1,5 @@
 function initializeHeatMap() {
-    var postsRef = new Firebase("https://glaring-torch-3644.firebaseio.com/");
+    var postsRef = fireBaseRef;
     var postsQuery = postsRef.limit(200);
 
     postsQuery.on('value', function (records) {
