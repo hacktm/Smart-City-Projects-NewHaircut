@@ -4,8 +4,41 @@ function initializeHeatMap() {
 
     heatMap = new google.maps.visualization.HeatmapLayer();
 
+
     postsQuery.on('value', function (records) {
-            var heatMapPoints = new Array();
+            var heatMapPoints = [
+                // Capitze Simulation
+                new google.maps.LatLng(45.748192, 21.230400),
+                new google.maps.LatLng(45.748237, 21.229971),
+                new google.maps.LatLng(45.748274, 21.230185),
+                new google.maps.LatLng(45.748080, 21.229949),
+                new google.maps.LatLng(45.748237, 21.230110),
+
+                new google.maps.LatLng(45.748312, 21.230261),
+                new google.maps.LatLng(45.748259, 21.229982),
+
+
+                new google.maps.LatLng(45.741263, 21.243883),
+                new google.maps.LatLng(45.739608, 21.243604),
+                new google.maps.LatLng(45.741263, 21.243883),
+                new google.maps.LatLng(45.739608, 21.243604),
+                new google.maps.LatLng(45.741263, 21.243883),
+                new google.maps.LatLng(45.741273, 21.244463),
+                new google.maps.LatLng(45.740203, 21.244399),
+                new google.maps.LatLng(45.739394, 21.243820),
+                new google.maps.LatLng(45.740203, 21.244399),
+
+                new google.maps.LatLng(45.741113, 21.242896),
+                new google.maps.LatLng(45.741113, 21.242896),
+                new google.maps.LatLng(45.748194, 21.230389),
+                new google.maps.LatLng(45.740203, 21.244399)
+
+
+//
+
+
+
+            ];
             records.forEach(function (element) {
                 coordinatesSet = element.val();
                 heatMapPoints.push(new google.maps.LatLng(coordinatesSet.latitude, coordinatesSet.longitude));
