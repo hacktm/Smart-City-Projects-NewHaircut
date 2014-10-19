@@ -85,6 +85,12 @@ button,a {
     -moz-box-shadow: 0 7px 0px 0px #ae2268;
     font-family: 'PT Sans Narrow', sans-serif;
 }
+.awesome-btn:hover {
+    margin-bottom: -7px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
 .refresh-btn,
 .refresh-btn-loading {
     background-repeat: no-repeat;
