@@ -60,20 +60,34 @@ html, body {
 }
 .awesome-btn {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background: #f42f92;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: #ae2268;
-    border-bottom-width: 15px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    border: none;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
     font-size: 80px;
     color: #fff;
     font-weight: 700;
+    box-shadow: 0 10px 0px 0px #ae2268;
+    -webkit-box-shadow: 0 10px 0px 0px #ae2268;
+    -moz-box-shadow: 0 10px 0px 0px #ae2268;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.refresh-btn {
+    background: url("../../images/mobile/location-icon.png") no-repeat center #f42f92;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-bottom: 10px;
+    float: right;
+    box-shadow: 0 5px 0px 0px #ae2268;
+    -webkit-box-shadow: 0 5px 0px 0px #ae2268;
+    -moz-box-shadow:0 5px 0px 0px #ae2268;
 }
 
 /******************** TUTORIAL SECTION ********************/
@@ -165,7 +179,7 @@ padding: 10px;
 }
 @media (max-width: 500px) {
     .awesome-btn {
-        font-size: 100%;
+        font-size: 33px;
     }
     #pac-input {
         top: 79% !important;
