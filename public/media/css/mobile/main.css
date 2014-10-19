@@ -343,7 +343,7 @@ button,a {
     margin: 0;
 }
 .thermometer-bg {
-    background: url('../../images/mobile/thermometer.png') no-repeat center 10px;
+    background: url('../../images/mobile/thermometer.png') no-repeat center 30px;
     height: 100%;
     width: 100%;
     background-size: 25%;
