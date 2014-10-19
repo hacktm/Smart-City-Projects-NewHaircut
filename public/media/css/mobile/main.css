@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'PT Sans Narrow', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
 }
 
 #panel {
@@ -76,7 +77,7 @@ html, body {
     font-family: 'PT Sans Narrow', sans-serif;
 }
 .refresh-btn {
-    background: url("../../images/mobile/location-icon.png") no-repeat center #f42f92;
+    background: url("../../images/mobile/Location-icon_x2.png") no-repeat center #f42f92;
     width: 45px;
     height: 45px;
     display: inline-block;
@@ -88,6 +89,7 @@ html, body {
     box-shadow: 0 5px 0px 0px #ae2268;
     -webkit-box-shadow: 0 5px 0px 0px #ae2268;
     -moz-box-shadow:0 5px 0px 0px #ae2268;
+    background-size: 80%;
 }
 
 /******************** TUTORIAL SECTION ********************/
@@ -177,6 +179,67 @@ padding: 10px;
     font-size: 13px;
     font-weight: 300;
 }
+ /*Loading Screen*/
+
+.loading-screen {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    margin: 0px auto;
+    background: url('../../images/mobile/loading-screen.jpg') !important;
+    z-index: 20;
+}
+.loading-screen .app-name {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 55px;
+    color: #ffffff;
+    text-align: center;
+}
+.loading-screen .app-logo {
+    height: 295px;
+}
+.loading-screen .app-name p {
+    margin: 0;
+}
+.loading-screen .app-name span {
+    color: #f42f92;
+}
+.loading-screen .app-logo .pin {
+    background: url('../../images/mobile/logo-pin.png') no-repeat center;
+    background-size: 50%;
+    display: inline-block;
+    width: 100%;
+    height: 322px;
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+.loading-screen .app-logo img {
+    width: 300px;
+}
+.loading-screen .app-logo .thunder {
+    position: absolute;
+    width: 25%;
+    height: 220px;
+    top: 30px;
+    left: 115px;
+    display: inline-block;
+    background: url('../../images/mobile/logo-bolt.png') no-repeat center;
+    background-size: 80%;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+
 @media (max-width: 500px) {
     .awesome-btn {
         font-size: 33px;
