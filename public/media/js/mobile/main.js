@@ -38,5 +38,5 @@ $(document).ready(function () {
 });
 
 function hideLoader() {
-   // $('.loading-screen').delay(5000).fadeOut(500);
+    $('.loading-screen').delay(5000).fadeOut(500);
 }
