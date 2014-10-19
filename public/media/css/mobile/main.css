@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif !important;
 }
 
 #panel {
@@ -60,20 +60,34 @@ html, body {
 }
 .awesome-btn {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background: #f42f92;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: #ae2268;
-    border-bottom-width: 15px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    border: none;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
     font-size: 80px;
     color: #fff;
     font-weight: 700;
+    box-shadow: 0 10px 0px 0px #ae2268;
+    -webkit-box-shadow: 0 10px 0px 0px #ae2268;
+    -moz-box-shadow: 0 10px 0px 0px #ae2268;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.refresh-btn {
+    background: url("../../images/mobile/location-icon.png") no-repeat center #f42f92;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-bottom: 10px;
+    float: right;
+    box-shadow: 0 5px 0px 0px #ae2268;
+    -webkit-box-shadow: 0 5px 0px 0px #ae2268;
+    -moz-box-shadow:0 5px 0px 0px #ae2268;
 }
 
 /******************** TUTORIAL SECTION ********************/
@@ -85,30 +99,36 @@ html, body {
 }
 
 /* Tutorial slides */
-.tutorial-slide-1{
-    background: lightgoldenrodyellow;
+.bxslider li div{
+    background: #34315a;
+    margin:0 auto;
     width: 100%;
     height:100%;
+
 }
-.tutorial-slide-2{
-    background: lightblue;
-    width: 100%;
-    height:100%;
-}
-.tutorial-slide-3{
-    background: lightcoral;
-    width: 100%;
-    height:100%;
-}
+
 /* Tutorial close buttons */
 .close-tutorial-button{
     float:right;
     padding: 8px;
     font-size: 30px;
+    display: block;
+    margin: 15px;color: #ffffff;
+    width: 25px;
+    height: 25px;
+    background: url('../../images/mobile/close.png') no-repeat center center;
+    background-size: 20px 20px;
 }
 
 .tutorial p{
     margin: 0;
+    padding-top: 80px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+}
+.tutorial p span{
+padding: 10px;
     padding:0;
 }
 
@@ -159,7 +179,7 @@ html, body {
 }
 @media (max-width: 500px) {
     .awesome-btn {
-        font-size: 100%;
+        font-size: 33px;
     }
     #pac-input {
         top: 79% !important;

@@ -6,6 +6,6 @@ function initializeTutorial() {
         }
     );
     $('.close-tutorial-button').click(function () {
-        $('.bxslider').fadeOut(1000)
+        $('.tutorial').fadeOut(1000);
     });
 }
