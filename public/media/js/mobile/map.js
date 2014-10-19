@@ -102,6 +102,6 @@ function updateMyLocationMarker() {
     markerMyLocation.setIcon('/media/images/mobile/me-pin.png');
     markerMyLocation.setMap(map);
 
-    map.setCenter(myLatlng);
+    map.panTo(myLatlng);
     map.setZoom(15);
 }

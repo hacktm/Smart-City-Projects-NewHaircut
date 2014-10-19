@@ -19,9 +19,6 @@ $(document).ready(function () {
     // 3. main screen (current location + button awesome)
     initializeAwesomeButton();
 
-
-    //initializeMap();
-
     // 4. popup after awesome is hit
 
 
