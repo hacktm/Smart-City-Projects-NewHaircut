@@ -4,7 +4,11 @@ var heatMapPoints = new Array();
 var map;
 var heatMap;
 
+// show loader
+
 $(document).ready(function () {
+
+
     // 1. loading screen (get location!!!!! + get current parties coordinates)
     initializeMap();
     initializeHeatMap();
@@ -12,7 +16,7 @@ $(document).ready(function () {
 
     // 2. tutorial slider
 
-    if(!window.location.hash) {
+    if (!window.location.hash) {
         initializeTutorial();
     }
 
@@ -26,4 +30,11 @@ $(document).ready(function () {
 
 
     // 5. set party markers
+
+
 });
+
+function hideLoader() {
+    $('.loading-screen').delay(5000).fadeOut(500);
+
+}
