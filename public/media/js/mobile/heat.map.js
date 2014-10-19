@@ -25,18 +25,19 @@ function initializeHeatMap() {
                 coordinatesSet = element.val();
                 heatMapPoints.push(new google.maps.LatLng(coordinatesSet.latitude, coordinatesSet.longitude));
             });
-
-            var pointArray = new google.maps.MVCArray(heatMapPoints);
-
-            heatMap = new google.maps.visualization.HeatmapLayer({
-                data: pointArray
-            });
-
-            heatMap.setMap(map);
-            setHeatMapGradient();
-            setHeatMapRadius();
         }
     );
+
+    var pointArray = new google.maps.MVCArray(heatMapPoints);
+
+    heatMap = new google.maps.visualization.HeatmapLayer({
+        data: pointArray
+    });
+
+    heatMap.setMap(map);
+    setHeatMapGradient();
+    setHeatMapRadius();
+    hideLoader();
 }
 
 function setHeatMapGradient() {
