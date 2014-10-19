@@ -337,7 +337,7 @@ button,a {
     padding-left: 20px;
     padding-right: 20px;
     line-height: 24px;
-    padding-top: 365px;
+    padding-top: 375px;
     text-align: center;
     font-weight: 700;
     margin: 0;
@@ -356,6 +356,7 @@ button,a {
     background-size: 50%;
     float: right;
     margin-right: 10px;
+    margin-top: 10px;
 }
 @media (max-width: 500px) {
     .awesome-btn {
