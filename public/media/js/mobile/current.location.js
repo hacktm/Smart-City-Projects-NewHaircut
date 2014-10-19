@@ -1,18 +1,23 @@
 function initializeCurrentLocation() {
-    getCurrentLocation();
-}
-
-function getCurrentLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position);
+        navigator.geolocation.getCurrentPosition(initialPosition);
     }
 }
 
-function position(position) {
+function updateCurrentLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(updatePosition);
+    }
+}
+
+function initialPosition(position) {
+    updatePosition(position);
+    updateMyLocationMarker();
+}
+
+function updatePosition(position) {
     currentLocation = {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
     };
-
-    setCurrentPostion();
 }

@@ -91,7 +91,7 @@ function initializeMap() {
     ]);
 }
 
-function setCurrentPostion() {
+function updateMyLocationMarker() {
     var myLatlng = new google.maps.LatLng(currentLocation.latitude, currentLocation.longitude);
     var marker = new google.maps.Marker({
         position: myLatlng,
