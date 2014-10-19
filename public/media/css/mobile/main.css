@@ -310,27 +310,33 @@ button,a {
     -webkit-animation-timing-function: linear;
 }
 /* Success Screen*/
+.quoute-wrapper {
+    height: 600px;
+}
+.quoute-message {
+    margin-top: 300px;
+    text-align: left;
+    font-weight: 700;
+}
+.quoute-author {
+   font-weight: 400;
+   padding-right: 30px;
+}
 
 .popup-window {
     display: none;
     z-index: 20;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     position: absolute;
     background: #403e71;
 }
 .popup-window p {
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
     padding-left: 20px;
     padding-right: 20px;
-    text-align: center;
-    font-weight: 700;
     line-height: 24px;
-    padding-top: 335px;
 }
 .thermometer-bg {
     background: url('../../images/mobile/thermometer.png') no-repeat center;
