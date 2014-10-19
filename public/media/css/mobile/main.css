@@ -332,20 +332,21 @@ button,a {
     background: #403e71;
 }
 .popup-window p {
-    font-size: 24px;
+    font-size: 25px;
     color: #fff;
     padding-left: 20px;
     padding-right: 20px;
     line-height: 24px;
-    padding-top: 425px;
+    padding-top: 395px;
     text-align: center;
+    font-weight: 700;
+    margin: 0;
 }
 .thermometer-bg {
-    background: url('../../images/mobile/thermometer.png') no-repeat center;
-    height: 40%;
+    background: url('../../images/mobile/thermometer.png') no-repeat center 10px;
+    height: 100%;
     width: 100%;
     background-size: 25%;
-    margin-top: 20px;
 }
 .close-popup-window {
     background: url('../../images/mobile/close-pop-up.png') no-repeat center;
