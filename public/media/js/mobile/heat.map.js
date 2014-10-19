@@ -33,7 +33,11 @@ function setHeatMapGradient() {
         'rgba(188, 64, 141, 1)',
         'rgba(205, 59, 134, 1)',
         'rgba(222, 53, 128, 1)',
-        'rgba(238, 48, 122, 1)'
+        'rgba(238, 48, 122, 1)',
+        'rgba(244, 73, 98, 1)',
+        'rgba(247, 93, 74, 1)',
+        'rgba(249, 112, 49, 1)',
+        'rgba(252, 132, 25, 1)'
     ];
     heatMap.set('gradient', heatMap.get('gradient') ? null : gradient);
 }
