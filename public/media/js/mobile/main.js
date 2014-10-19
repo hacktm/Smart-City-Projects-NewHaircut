@@ -6,37 +6,31 @@ var heatMap;
 
 $(document).ready(function () {
 
-    // 1. loading screen (get location!!!!! + get current parties coordinates)
-    initializeMap();
-    initializeHeatMap();
-    initializeCurrentLocation();
-
-    // 2. tutorial slider
     if (!window.location.hash) {
         initializeTutorial();
     }
 
-    // 3. main screen (current location + button awesome)
+    initializeMap();
+    initializeHeatMap();
+    initializeCurrentLocation();
+
     initializeAwesomeButton();
 
-
-
-
-    // 4. fancy stuff
-
-    $('#map-canvas').mousedown(function(){
-            $('#button-awesome').css('opacity','0.4');
-        $('.refresh-btn').css('opacity','0.4');
+    $('#map-canvas').mousedown(function () {
+        $('#button-awesome').css('opacity', '0.4');
+        $('.refresh-btn').css('opacity', '0.4');
     });
 
-    $('#map-canvas').mouseup(function(){
-        $('#button-awesome').css('opacity','1.0');
-        $('.refresh-btn').css('opacity','1.0');
+    $('#map-canvas').mouseup(function () {
+        $('#button-awesome').css('opacity', '1.0');
+        $('.refresh-btn').css('opacity', '1.0');
 
     });
 
 });
 
 function hideLoader() {
-    $('.loading-screen').delay(5000).fadeOut(500);
+    $('#button-awesome').show();
+    $('.refresh-btn-loading').show();
+    $('.loading-screen').delay(2000).fadeOut(500);
 }
