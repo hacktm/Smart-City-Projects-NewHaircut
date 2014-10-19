@@ -105,7 +105,5 @@ function updateMyLocationMarker() {
 }
 
 function jumpToCenter(){
-    var center = new google.maps.LatLng(currentLocation.latitude, currentLocation.longitude);
-    // using global variable:
-    map.panTo(center);
+    updateMyLocationMarker();
 }
