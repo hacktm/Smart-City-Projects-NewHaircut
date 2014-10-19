@@ -238,8 +238,44 @@ padding: 10px;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
 }
+/* Success Screen*/
 
-
+.popup-window {
+    display: none;
+    z-index: 35;
+    width: 310px;
+    height: 449px;
+    border-radius: 10px;
+    left: 12%;
+    position: absolute;
+    background: #403e71;
+}
+.popup-window p {
+    font-size: 20px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 24px;
+    padding-top: 260px;
+}
+.thermometer-bg {
+    background: url('../../images/mobile/thermometer.png') no-repeat center;
+    height: 60%;
+    width: 100%;
+    background-size: 15%;
+    margin-top: -15px;
+}
+.close-popup-window {
+    background: url('../../images/mobile/close-pop-up.png') no-repeat center;
+    display: inline-block;
+    width: 40px;
+    height: 38px;
+    background-size: 50%;
+    float: right;
+    margin-right: 10px;
+}
 @media (max-width: 500px) {
     .awesome-btn {
         font-size: 33px;
