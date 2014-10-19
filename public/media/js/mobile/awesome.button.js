@@ -18,6 +18,26 @@ var funnyQuoutes = [
     {
         message: 'Be yourself; everyone else is already taken.',
         author: 'Oscar Wilde'
+    },
+    {
+        message: 'Everywhere is within walking distance if you have the time.',
+        author: 'Steven Wright'
+    },
+    {
+        message: 'I\'m an idealist. I don\'t know where I\'m going, but I\'m on my way.',
+        author: 'Carl Sandburg'
+    },
+    {
+        message: 'Laugh and the world laughs with you, snore and you sleep alone.',
+        author: 'Anthony Burgess'
+    },
+    {
+        message: 'Is a hippopotamus a hippopotamus, or just a really cool Opotamus?',
+        author: 'Mitch Hedberg'
+    },
+    {
+        message: 'I distrust camels, and anyone else who can go a week without a drink.',
+        author: 'Joe E. Lewis'
     }
 ];
 
