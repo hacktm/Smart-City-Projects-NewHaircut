@@ -1,163 +1,26 @@
-var map, pointArray, heatmap;
-
-window.coordinates = [];
-
-function initializeMap() {
-    // get current coordinates
-
-    // get parties
+function initializeHeatMap() {
     var postsRef = new Firebase("https://glaring-torch-3644.firebaseio.com/");
     var postsQuery = postsRef.limit(200);
 
     postsQuery.on('value', function (records) {
             records.forEach(function (element) {
                 coordinatesSet = element.val();
-                coordinates.push(new google.maps.LatLng(coordinatesSet.latitude, coordinatesSet.longitude));
+                heatMapPoints.push(new google.maps.LatLng(coordinatesSet.latitude, coordinatesSet.longitude));
             });
 
-            generateMap('45.755539', '21.237499');
+            var pointArray = new google.maps.MVCArray(heatMapPoints);
+
+            heatMap = new google.maps.visualization.HeatmapLayer({
+                data: pointArray
+            });
+
+            heatMap.setMap(map);
+            setHeatMapGradient();
         }
     );
 }
 
-function generateMap(currentLatitude, currentLongitude) {
-
-    var mapOptions = {
-        zoom: 14,
-        center: new google.maps.LatLng(currentLatitude, currentLongitude),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        disableDefaultUI: true
-    };
-
-    map = new google.maps.Map(document.getElementById('map-canvas'),
-        mapOptions);
-
-    map.set('styles', [
-        {
-            featureType: 'road',
-            elementType: 'geometry',
-            stylers: [
-                { color: '#48447c' },
-                { weight: 1 }
-            ]
-        },
-        {
-            featureType: 'road',
-            elementType: 'labels',
-            stylers: [
-                { saturation: -100 },
-                { invert_lightness: true }
-            ]
-        },
-        {
-            featureType: 'landscape',
-            elementType: 'geometry',
-            stylers: [
-                { color: '#292750' }
-
-            ]
-        },
-        {
-            featureType: 'administrative',
-            elementType: 'geometry',
-            stylers: [
-                { visibility: 'off' }
-            ]
-        },
-        {
-            featureType: 'poi',
-            elementType: 'geometry',
-            stylers: [
-                { color: '#292750' }
-            ]
-        },
-        {
-            featureType: 'poi.park',
-            elementType: 'geometry',
-            stylers: [
-                { color: '#3c3767' }
-            ]
-        },
-        {
-            featureType: 'transit',
-            elementType: 'geometry',
-            stylers: [
-                { visibility: 'off' }
-            ]
-        },
-        {
-            featureType: 'poi',
-            elementType: 'labels',
-            stylers: [
-                { color:'#82819b' }
-            ]
-        },
-        {
-            featureType: 'district',
-            elementType: 'labels.text',
-            stylers: [
-                { color:'#82819b' }
-            ]
-        },
-        {
-            featureType: 'district',
-            elementType: 'labels.text.stroke',
-            stylers: [
-                { visibility:'off' }
-            ]
-        },
-        {
-            featureType: 'water',
-            elementType: 'geometry.fill',
-            stylers: [
-                { color: '#1849ad' }
-            ]
-        }
-    ]);
-        // Create the search box and link it to the UI element.
-    var input = /** @type {HTMLInputElement} */(
-        document.getElementById('pac-input'));
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-    var searchBox = new google.maps.places.SearchBox(
-        /** @type {HTMLInputElement} */(input));
-
-//    [START region_getplaces]
-//    Listen for the event fired when the user selects an item from the
-//    pick list. Retrieve the matching places for that item.
-    google.maps.event.addListener(searchBox, 'places_changed', function() {
-        var places = searchBox.getPlaces();
-
-        if (places.length == 0) {
-            return;
-        }
-
-        var bounds = new google.maps.LatLngBounds();
-        for (var i = 0, place; place = places[i]; i++) {
-            setCurrentPostionMarker(map, place.geometry.location.latitude, place.geometry.location.longitude);
-            bounds.extend(place.geometry.location);
-            break;
-        }
-
-        map.fitBounds(bounds);
-    });
-
-    google.maps.event.addListener(map, 'bounds_changed', function() {
-        var bounds = map.getBounds();
-        searchBox.setBounds(bounds);
-    });
-
-    setCurrentPostionMarker(map, currentLatitude, currentLongitude);
-}
-function setMapStyle(map){
-
-}
-
-function toggleHeatmap() {
-    heatmap.setMap(heatmap.getMap() ? null : map);
-}
-
-function setGradient() {
+function setHeatMapGradient() {
     var gradient = [
         'rgba(255, 151, 0, 0)',
         'rgba(254, 144, 11, 1)',
@@ -179,23 +42,6 @@ function setGradient() {
         'rgba(240, 53, 77, 1)',
         'rgba(239, 53, 53, 1)'
     ];
-    heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+    heatMap.set('gradient', heatMap.get('gradient') ? null : gradient);
 }
 
-function setRadius() {
-    heatmap.set('radius', heatmap.get('radius') ? null : 10);
-}
-
-function setOpacity() {
-    heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
-}
-
-function setCurrentPostionMarker(map, latitude, longitude) {
-    var myLatlng = new google.maps.LatLng(latitude, longitude);
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        icon: '/media/images/mobile/current-location-marker.png'
-    });
-
-    marker.setMap(map);
-}
