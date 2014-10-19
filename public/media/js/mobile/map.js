@@ -103,7 +103,3 @@ function updateMyLocationMarker() {
     map.setCenter(myLatlng);
     map.setZoom(15);
 }
-
-function jumpToCenter(){
-    updateMyLocationMarker();
-}
