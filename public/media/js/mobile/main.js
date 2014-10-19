@@ -1,3 +1,4 @@
+var fireBaseRef = new Firebase('https://glaring-torch-3644.firebaseio.com/');
 var currentLocation;
 var heatMapPoints = new Array();
 var map;
@@ -16,6 +17,7 @@ $(document).ready(function () {
     }
 
     // 3. main screen (current location + button awesome)
+    initializeAwesomeButton();
 
 
     //initializeMap();
