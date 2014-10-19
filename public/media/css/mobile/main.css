@@ -252,9 +252,11 @@ padding: 10px;
 .popup-window {
     display: none;
     z-index: 35;
-    width: 80%;
-    height: 75%;
-    left: 10%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
     position: absolute;
     background: #403e71;
 }
@@ -266,14 +268,14 @@ padding: 10px;
     text-align: center;
     font-weight: 700;
     line-height: 24px;
-    padding-top: 260px;
+    padding-top: 335px;
 }
 .thermometer-bg {
     background: url('../../images/mobile/thermometer.png') no-repeat center;
-    height: 60%;
+    height: 70%;
     width: 100%;
-    background-size: 15%;
-    margin-top: -15px;
+    background-size: 25%;
+    margin-top: 20px;
 }
 .close-popup-window {
     background: url('../../images/mobile/close-pop-up.png') no-repeat center;
