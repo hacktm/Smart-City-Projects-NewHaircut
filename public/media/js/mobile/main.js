@@ -10,7 +10,10 @@ $(document).ready(function () {
     initializeCurrentLocation();
 
     // 2. tutorial slider
-    initializeTutorial();
+
+    if(!window.location.hash) {
+        initializeTutorial();
+    }
 
     // 3. main screen (current location + button awesome)
 
