@@ -34,7 +34,7 @@ function initializeHeatMap() {
 
             heatMap.setMap(map);
             setHeatMapGradient();
-            setHeadMapRadius();
+            setHeatMapRadius();
         }
     );
 }
@@ -55,6 +55,6 @@ function setHeatMapGradient() {
     heatMap.set('gradient', heatMap.get('gradient') ? null : gradient);
 }
 
-function setHeadMapRadius() {
+function setHeatMapRadius() {
     heatMap.set('radius', heatMap.set('radius') ? null : 20);
 }
