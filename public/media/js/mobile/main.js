@@ -19,13 +19,24 @@ $(document).ready(function () {
     // 3. main screen (current location + button awesome)
     initializeAwesomeButton();
 
-    // 4. popup after awesome is hit
 
 
-    // 5. set party markers
+
+    // 4. fancy stuff
+
+    $('#map-canvas').mousedown(function(){
+            $('#button-awesome').css('opacity','0.4');
+        $('.refresh-btn').css('opacity','0.4');
+    });
+
+    $('#map-canvas').mouseup(function(){
+        $('#button-awesome').css('opacity','1.0');
+        $('.refresh-btn').css('opacity','1.0');
+
+    });
 
 });
 
 function hideLoader() {
-    $('.loading-screen').delay(5000).fadeOut(500);
+   // $('.loading-screen').delay(5000).fadeOut(500);
 }
