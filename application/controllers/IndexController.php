@@ -6,7 +6,7 @@ class IndexController extends AbstractController {
 
     public function indexAction()
     {
-        $this->app->render('index.php');
+        $this->app->render('desktop/index.phtml');
     }
 
 }
