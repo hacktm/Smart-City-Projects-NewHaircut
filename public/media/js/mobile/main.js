@@ -1,4 +1,4 @@
-var fireBaseRef = new Firebase('https://radiant-torch-4202.firebaseio.com/');
+var fireBaseRef = new Firebase('https://glaring-torch-3644.firebaseio.com');
 var currentLocation;
 var markerMyLocation = null;
 var map;
